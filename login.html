@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="login3.css">
+</head>
+
+<body style="background: url(A.jpeg)no-repeat; background-size: cover;">
+<header>
+    <div>
+        <h1><center>E-Cart</center></h1>
+    </div>
+</header>
+<main>
+    <div id="div1">
+        <form id="f1">
+          <h1>Login</h1>
+            <div id="d2">
+                <label for="">Username</label>
+                <input type="text" name="" id="loginUser" required>
+            </div>
+            <div id="d2">
+                <label for="">Password</label>
+                <input type="password" name="" id="loginPass" required>
+            </div>
+            <p id="p1"><input type="checkbox" name="" id="">Remember me <a href="#">Forget password</a></p>
+            <center><button type="button" onclick="login()" id="button">Login</button></center>
+            <p id="error" style="color:red;"></p>
+            <p id="p2">Didn't have any account? <a href="register.html">Registration</a></p>
+        </form>
+    </div>
+</main>
+<script>
+    function login() 
+    {
+  let stored = JSON.parse(localStorage.getItem("user"));
+  if (loginUser.value === stored.username && loginPass.value === stored.password) {
+    localStorage.setItem("loggedIn", "true");
+    window.location.href = "index.html";
+  } else {
+    document.getElementById("error").innerText = "Invalid username or password";
+  }
+}
+</script>
+</body>
+</html>

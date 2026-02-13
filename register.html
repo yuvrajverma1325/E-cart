@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="register.css">
+</head>
+<body style="background-image: url(reg_img.jpeg); background-size: cover;">
+<div id="div1">
+        <form id="f1">
+          <h1>Registration Form</h1>
+            <div id="d2">
+                <label for="">Name</label>
+                <input type="text" name="" id="username" required>
+            </div>
+            
+            <div id="d2">
+                <label for="">Email</label>
+                <input type="email" name="" id="email" required>
+            </div>
+
+            <div id="d2">
+                <label for="">Phone no.</label>
+                <input type="number" name="" id="email" required>
+            </div>
+
+            <div id="d2">
+                <label for="">Password</label>
+                <input type="password" name="" id="password" required>
+            </div>
+
+            <div id="d2">
+                <label for="">Confirm Password</label>
+                <input type="password" name="" id="email" required>
+            </div>
+
+            <center><button type="button" onclick="register()" id="button">Register</button></center>
+            <p id="p2">Already Registration <a href="login.html">loggedIn</a></p>
+        </form>
+    </div>
+
+
+<script>
+      function register() {
+  let user = {
+    username: username.value,
+    password: password.value,
+    email: email.value
+  };
+  localStorage.setItem("user", JSON.stringify(user));
+  alert("Registered Successfully");
+  window.location.href = "login.html";
+}
+</script>
+</body>
+</html>

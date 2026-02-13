@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="product.html">Product</a>
+  <a href="products.html">Products</a>
+  <a href="cart.html">Cart</a>
+  <a href="login.html">Login</a>
+  <a href="register.html">Register</a>
+</nav>
+
+<h2>Featured Product</h2>
+
+<div class="card">
+  <img src="download (10).jpeg">
+  <h3>Smart Phone</h3>
+  <p>₹15000</p>
+  <button onclick="addToCartCheck('Redmi 5g', 15000, 'download (10).jpeg' )">Add to Cart</button>
+</div>
+
+<script>
+  function addToCartCheck() {
+  if (!localStorage.getItem("user")) {
+    window.location.href = "register.html";
+  } else if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "login.html";
+  } else {
+    alert("Added to cart");
+  }
+}
+
+function addProduct(name, price, image) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({ name, price, image });
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(name + "Product Added");
+}
+</script>
+</body>
+</html>

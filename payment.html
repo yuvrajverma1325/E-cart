@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    button
+    {
+    padding:8px;
+    width:10%;
+    border:none;
+    background:darkgray;
+    color:black;
+    border-radius:10px;
+    cursor:pointer;
+    }
+    button:hover
+    {
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body style="background-color: coral;">
+<h2>Payment Gateway</h2>
+<p id="payAmount"></p>
+
+<label><input type="radio" name="payment"> Card</label><br>
+<label><input type="radio" name="payment"> UPI</label><br>
+<label><input type="radio" name="payment"> Net Banking</label><br>
+
+<button onclick="payNow()">Pay Now</button>
+
+<script>
+
+function proceedPayment() {
+  window.location.href = "payment.html";
+}
+
+if (document.getElementById("payAmount")) {
+  payAmount.innerText = "Payable Amount: ₹" + localStorage.getItem("total");
+}
+
+function payNow() 
+{
+    let paymentMethod =
+      document.querySelector('input[name="payment"]:checked');
+
+    if (!paymentMethod) {
+        alert("Please select a payment method");
+        return;
+    }
+
+    alert("Payment Successful via " + paymentMethod.value);
+    localStorage.removeItem("cart");
+    window.location.href = "products.html";
+}
+</script>
+</body>
+</html>

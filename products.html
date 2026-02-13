@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    button
+    {
+    padding:8px;
+    border:none;
+    background:orange;
+    color:black;
+    border-radius:5px;
+    cursor:pointer;
+    }
+    button:hover
+    {
+      background-color: crimson;
+    }
+  </style>
+</head>
+<body style="  background-color: white; background: url(1.avif)no-repeat; background-size:cover;">
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="product.html">Product</a>
+  <a href="products.html">Products</a>
+  <a href="cart.html">Cart</a>
+  <a href="login.html">Login</a>
+  <a href="register.html">Register</a>
+</nav>
+
+<h2>All Products</h2>
+
+<div style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
+    <div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.20);">
+      <img src="download (8).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>Smart Phone</h3>
+      <p>₹49,999</p>
+      <button onclick="addToCart('Google pixel', 49999, 'download (8).jpeg')" id="bt">Add to Cart</button>
+    </div>
+
+    <div style=" width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (26).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>Headphones</h3>
+      <p>₹2,499</p>
+      <button onclick="addToCart('Headphone', 2499, 'download (26).jpeg' )">Add to Cart</button>
+    </div>
+
+    <div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (44).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>Shoes</h3>
+      <p>₹3,999</p>
+      <button onclick="addToCart('Casual Shoes', 3999, 'download (44).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (4).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>Xiami 13 pro</h3>
+      <p>₹15,999</p>
+      <button onclick="addToCart('Xiami 13 pro',15999 , 'download (4).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (11).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>HP Victus</h3>
+      <p>₹80999</p>
+      <button onclick="addToCart('HP Victus', 80999, 'download (11).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (14).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>Macbook</h3>
+      <p>₹1,25,999</p>
+      <button onclick="addToCart('Apple Macbook', 125999, 'download (14).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (138).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3> Sony Headphone</h3>
+      <p>₹5,999</p>
+      <button onclick="addToCart('Headphone', 5999, 'download (138).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (34).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>LG Nano cell</h3>
+      <p>₹60999</p>
+      <button onclick="addToCart('LG LED', 60999, 'download (34).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (32).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>MI LED</h3>
+      <p>₹45,999</p>
+      <button onclick="addToCart('Mi LED', 45999, 'download (32).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (31).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>LED</h3>
+      <p>₹55,999</p>
+      <button onclick="addToCart('One plus LED', 55999, 'download (31).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (10).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>Redmi 10pro+ 5g</h3>
+      <p>₹15,999</p>
+      <button onclick="addToCart('Redmi 10pro+ 5g', 15999, 'download (10).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (9).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>Samsung galaxy A54</h3>
+      <p>₹20,999</p>
+      <button onclick="addToCart('Samsung galaxy A54', 20999, 'download (9).jpeg' )">Add to Cart</button>
+    </div>
+
+<div style="width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);">
+      <img src="download (5).jpeg" style=" width: 100%; height: 150px; object-fit: contain;">
+      <h3>Realmi 10pro </h3>
+      <p>₹14,999</p>
+      <button onclick="addToCart('Realmi 10pro', 14999, 'download (5).jpeg' )">Add to Cart</button>
+    </div>
+
+</div>
+
+<script>
+
+function addToCart(name, price, image) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({ name, price, image });
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(name +  "Product Added");
+}
+
+
+</script>
+</body>
+</html>
